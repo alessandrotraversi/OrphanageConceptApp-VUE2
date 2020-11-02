@@ -19,19 +19,26 @@
   </aside>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+// Define the props by using Vue's canonical way.
+const GreetingProps = Vue.extend({
   props: {
     sizeClass: {
       type: String,
       default: '',
       required: false
     }
-  },
-  methods: {
-    goBack () {
-      this.$router.go(-1)
-    }
+  }
+})
+
+@Component
+export default class Sidebar extends GreetingProps {
+
+  goBack () {
+    this.$router.go(-1)
   }
 }
 </script>
