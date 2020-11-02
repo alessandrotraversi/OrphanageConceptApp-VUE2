@@ -1,0 +1,122 @@
+// * ========================================================================
+//   # OBJECT -> SIDEBARS
+//   ======================================================================== */
+
+%SHARED-main--layout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+%SHARED-main--skin{
+  @extend .u-gradient--main;
+}
+
+
+/*********************************************************
+********************************************************
+** BIGGER SIDEBAR
+********************************************************
+*********************************************************/
+
+// MAIN CONTAINER
+%SIDEBAR-bigger--layout{
+  width:440px; 
+  padding: 80px;
+
+  @extend %SHARED-main--layout;
+}
+%SIDEBAR-bigger--skin{
+  @extend %SHARED-main--skin;
+}
+%SIDEBAR-bigger--child{
+  h2{
+    @extend .u-text--extra-bold;
+    font-size: 40px;
+    line-height: 42px;
+    margin-top: 6px;
+  }
+
+  p{
+    line-height: 28px;
+    margin-top: 24px;
+  }
+}
+
+// MAIN CONTAINER - footer
+%SIDEBAR-bigger__footer--layout{
+  display: flex;
+  flex-direction: column;
+
+  line-height: 24px;
+}
+%SIDEBAR-bigger__footer--child{
+  strong{ @extend .u-text--extra-bold; }
+}
+
+/*********************************************************
+********************************************************
+** SMALLER SIDEBAR
+********************************************************
+*********************************************************/
+
+// MAIN CONTAINER
+%SIDEBAR-smaller--layout{
+  position: fixed;
+  height: 100%;
+  padding: 32px 24px;  
+
+  @extend %SHARED-main--layout;
+  align-items: center;
+}
+%SIDEBAR-smaller--skin{
+  @extend %SHARED-main--skin;
+}
+%SIDEBAR-smaller--child{
+  img { width: 48px; }
+}
+
+// MAIN CONTAINER - footer
+%SIDEBAR-smaller__footer--layout{
+  width: 48px;
+  height: 48px;  
+
+  @extend .o-layout__children-align--center-center;
+}
+%SIDEBAR-smaller__footer--skin{
+  $c1: $color-water-4; $c2: $color-water-1;
+  border: 0;
+
+  background: $c1;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+
+  &:hover{ background: $c2; }
+}
+
+/*********************************************************
+********************************************************
+** RENDER
+********************************************************
+*********************************************************/
+aside {
+  &.bigger {
+    @include extend-array('SIDEBAR-bigger--', 'layout', 'skin', 'child');
+
+    footer{
+      @include extend-array('SIDEBAR-bigger__footer--', 'layout', 'child');
+    }
+  }
+
+  &.app-sidebar {
+    @include extend-array('SIDEBAR-smaller--', 'layout', 'skin', 'child');
+
+    footer{
+      a, button {
+        @include extend-array('SIDEBAR-smaller__footer--', 'layout', 'skin');
+      }
+    }
+  }
+}
