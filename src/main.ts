@@ -10,6 +10,7 @@ library.add(faArrowRight)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 import 'leaflet/dist/leaflet.css'
+import './assets/scss/custom.scss'
 
 Vue.config.productionTip = false
 

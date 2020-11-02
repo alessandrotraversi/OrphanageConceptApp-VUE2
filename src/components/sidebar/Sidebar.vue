@@ -13,7 +13,7 @@
         <slot  name="footer"></slot>
       </span>
       <button v-else type="button" v-on:click="goBack" aria-label="main-sidebar-btn">
-        <font-awesome-icon icon="fa-arrow-right" style="color: #fff; font-size:24px" />
+        <font-awesome-icon icon="arrow-right" style="color: #fff; font-size:24px" />
       </button>        
     </footer>
   </aside>

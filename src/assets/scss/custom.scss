@@ -1,26 +1,26 @@
-// Global
-@import "./custom_generics/normalize";
+/* Global */
+@import "/custom_generics/normalize";
 
-// Settings
-@import "./custom_settings/colors";
-@import "./custom_settings/fonts";
-@import "./custom_settings/logo.size";
-
-
-// Tools
-@import "./custom_tools/aspect";
-@import "./custom_tools/generators";
-@import "./custom_tools/placeholder";
-@import "./custom_tools/shorts";
+/* Settings */
+@import "/custom_settings/colors";
+@import "/custom_settings/fonts";
+@import "/custom_settings/logo.size";
 
 
-// Objects
-@import "./custom_objects/buttons";
-@import "./custom_objects/layout";
-@import "./custom_objects/sidebar";
+/* Tools */
+@import "/custom_tools/aspect";
+@import "/custom_tools/generators";
+@import "/custom_tools/placeholder";
+@import "/custom_tools/shorts";
 
 
-// Utils
-@import "./custom_utils/text";
-@import "./custom_utils/helper";
-@import "./custom_utils/gradient";
+/* Objects */
+@import "/custom_objects/buttons";
+@import "/custom_objects/layout";
+@import "/custom_objects/sidebar";
+
+
+/* Utils */
+@import "/custom_utils/text";
+@import "/custom_utils/helper";
+@import "/custom_utils/gradient";

@@ -45,7 +45,7 @@ $status-hidden-2: #9e9e9e;
 /*
 **   DEFAULT RENDER => body
 */
-body{
+#app{
   $c1: #fff; $c2: $color-blue-lt;
   @include theme($c1, $c2);
 }
