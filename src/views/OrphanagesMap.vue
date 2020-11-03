@@ -73,23 +73,12 @@ interface Orphanage{
 })
 export default class OrphanagesMap extends Vue {
   orphanages: Orphanage[] = []
+  mapIconObj = mapIcon
 
   mounted () {
-    this.loadOrphanages()
-  }
-
-  private async loadOrphanages () {
-    if (!this.orphanages.length) {
-      api.get('/orphanages').then((response) => {
-        this.orphanages = response.data
-      }, (error) => {
-        console.error(error)
-      })
-    }
-  }
-
-  get mapIconObj () {
-    return mapIcon
+    api.get('/orphanages').then((response) => {
+      this.orphanages = response.data
+    })
   }
 }
 </script>
