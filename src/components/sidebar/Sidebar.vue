@@ -4,7 +4,7 @@
     v-bind:class="[ sizeClass === 'bigger' ? 'bigger' : 'smaller app-sidebar' ]"
   >
     <header>
-      <img src="../../images/map-marker.svg" alt="Happy" />
+      <img src="../../assets/images/map-marker.svg" alt="Happy" />
       <slot v-if="sizeClass === 'bigger'" name="header"></slot>
     </header>
 
