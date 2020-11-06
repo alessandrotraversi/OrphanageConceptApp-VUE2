@@ -104,9 +104,6 @@ interface Orphanage {
 }
 
 @Component({
-  // Specify `components` option.
-  // See Vue.js docs for all available options:
-  // https://vuejs.org/v2/api/#Options-Data
   components: {
     Sidebar,
     LMap, LTileLayer, LMarker
