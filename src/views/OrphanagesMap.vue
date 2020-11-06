@@ -83,6 +83,6 @@ export default class OrphanagesMap extends Vue {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 @import "../assets/scss/__PAGES__/OrphanageMap";
 </style>
